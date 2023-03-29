@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+      <link rel="icon" href="images/logol.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="quiz-game.css">
+    <link rel="icon" type="image/png" href="Images-QuizGame/Quiz-Games-favicon.webp">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+
+<style>
+  * {
+  padding: 0;
+  margin: 0;
+}
+
+
+.navigation {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navigation li {
+  float: left;
+}
+
+.navigation a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navigation a:hover {
+  background-color: #111;
+}
+
+  
+</style>
+ <style type="text/css">
+        body{ font: 14px sans-serif; text-align: center; }
+    </style>
+
+
+<body>
+
+<div class="top">
+  <div class="container">
+  <div class="row"> 
+<div class="col-md-6">
+<ul class="navigation">
+  <li><a href="index.php">Home</a></li>
+  <li><a href="quiz_game.html">Quiz Game</a></li>
+  <li><a href="gallery.html">Gallery</a></li>
+  <li><a href="menu.php">Menu</a></li>
+  <li><a href="mycart.php"><IMG SRC="images/cart.gif" style="width: 80px; height: 60px; position: absolute; right: 0%;"></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<!-- START GAME BUTTON -->
+    <div class="start-button">
+        <button>Start the quiz</button>
+    </div>
+
+    <!-- INFO BOX -->
+    <div class="info-container">
+        <div class="info-title">
+            <h2>About the game</h2>
+        </div>
+        <div class="info-list">
+            <p>1. This game has a total of <span>10 questions</span>. </p>
+            <p>2. All the questions are basic details about <span>Food</span>. </p>
+            <p>3. Every question value is 1 point.</p>
+            <p>4. You will find out your score after answering all the questions.</p>
+        </div>
+        <div class="info-buttons">
+            <button class="exit">Exit</button>
+            <button class="play">Play</button>
+        </div>
+    </div>
+
+    <!-- QUIZ BOX -->
+    <div class="quiz-container">
+
+        <header class="quiz-header">
+            <h2>Quiz Game App</h2>
+            <img src="food1.jpg" alt="question-marks">
+        </header>
+
+        <section>
+            <div class="question-text">
+               <!-- <h3>When was Python created?</h3> -->
+            </div>
+            <div class="option-list">
+          <!--  <div class="option">
+                     <span>1987</span>
+                     <div class="wrong"> <i class="material-icons">cancel</i> </div>
+                </div>
+                <div class="option">
+                    <span>1991</span>
+                    <div class="tick"> <i class="material-icons">check_box</i> </div>
+                </div>
+                <div class="option">
+                    <span>2003</span>
+                    <div class="wrong"> <i class="material-icons">cancel</i> </div>
+                </div>
+                <div class="option">
+                    <span>1998</span>
+                    <div class="wrong"> <i class="material-icons">cancel</i> </div>
+                </div> --> 
+            </div>
+        </section>
+
+        <footer class="quiz-footer">
+            <div class="question-number">
+               <!-- <span> <p>1</p>of<p>10</p>questions </span> -->
+            </div>
+            <button class="next-btn">Next Question</button>
+        </footer>
+    </div>
+
+
+    <!-- RESULT BOX -->
+    <div class="result-container">
+        <div class="result-content">
+            <img src="food1.jpg" alt="medal">
+            <h4>Congratulations!</h4>
+            <div class="complete-text">You've finished the game!</div>
+            <div class="score-text">
+                Your score is <p>1</p> out of <p>10</p>!
+            </div>
+            <div class="continue-buttons">
+                <button class="quit">Quit</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="quiz-game.js"></script>
+    <script src="quiz-game-questions.js"></script>
+
+
+
+<style>
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #333;
+   color: white;
+   text-align: center;
+}
+</style>
+
+<div class="footer"> 
+<section class="newsletter-area section-padding-100-0">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Newsletter Text -->
+                <div class="col-12 col-lg-6 col-xl-7">
+                    <div class="newsletter-text mb-100">
+                        <h2>Subscribe for a <span>10% Discount</span></h2>
+                        <p>until June 20</p>
+                    </div>
+                </div>
+                
+                <div class="col-12 col-lg-6 col-xl-5">
+                    <div class="newsletter-form mb-100">
+                        <form action="newsletter.php" method="post">
+                            <input type="email" name="email" class="nl-email" placeholder="Your E-mail">
+                            <input type="submit" value="Subscribe">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</div>
+
+    
+
+</body>
+</html>

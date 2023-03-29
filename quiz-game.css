@@ -1,0 +1,271 @@
+:root {
+    font-size: 10px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Tahoma, Verdana, sans-serif;
+}
+body {
+    background-image: url(food1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}
+
+
+
+.start-button, .info-container, .quiz-container, .result-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.start-button button {
+    cursor: pointer;
+    font-size: 4.2rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    padding: 2.1rem 1.75rem;
+    outline: none;
+    color: black;
+    border: none;
+    border-radius: 6px;
+    background-color: rgb(255, 255, 51);
+    transition: 0.7s all ease-in-out;
+}
+.start-button button:hover {
+    transform: rotateX(360deg);
+    box-shadow: 0 0 10px rgb(255, 255, 51), 0 0 40px rgb(255, 255, 51), 0 0 80px rgb(255, 255, 51);
+}
+
+
+
+.info-container.active-info-container,
+.quiz-container.active-quiz-container,
+.result-container.active-result-container {
+    z-index: 5;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+    transition: 0.5s ease-in-out;
+}
+
+
+.info-container {
+    opacity: 0;
+    width: 65rem;
+    height: 45rem;
+    background-color: #fff;
+    border-radius: 6px;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
+}
+.info-container .info-title {
+    font-size: 2.4rem;
+    font-weight: 500;
+    padding: 2rem 3rem;
+    border-bottom: 2px solid silver;
+}
+.info-container .info-list {
+    font-size: 2.25rem;
+    padding: 2.8rem 2rem;
+    border-bottom: 2px solid silver;
+}
+.info-container .info-list p {
+    margin-bottom: 1.75rem;
+}
+.info-container .info-list p:last-child {
+    margin-bottom: 0rem;
+}
+.info-container .info-list p > span {
+    font-weight: 700;
+}
+.info-container .info-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.4rem 2.5rem;
+}
+.info-container .info-buttons > button {
+    cursor: pointer;
+    font-size: 1.9rem;
+    font-weight: 600;
+    padding: 1.8rem 5rem;
+    outline: none;
+    color: black;
+    border: 2px solid black;
+    border-radius: 6px;
+    background-color: rgb(255, 255, 51);
+    transition: 0.7s all ease-in-out;
+}
+.info-container .info-buttons > button:hover {
+    transform: rotateX(360deg);
+    box-shadow: 0 0 5px rgb(255, 255, 51), 0 0 20px rgb(255, 255, 51), 0 0 40px rgb(255, 255, 51);
+}
+
+
+.quiz-container {
+    opacity: 0;
+    width: 70rem;
+    height: 60rem;
+    background-color: #fff;
+    color: #111;
+    border-radius: 8px;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
+}
+.quiz-container .quiz-header {
+    height: 10rem;
+    padding: 2.2rem 2.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid silver;
+}
+.quiz-container .quiz-header h2 {
+    font-size: 3.3rem;
+}
+.quiz-container .quiz-header img {
+    height: 4.5rem;
+}
+.quiz-container section {
+    padding: 3rem 3rem 0 3rem;
+    border-bottom: 2px solid silver;
+}
+.quiz-container .question-text {
+    font-size: 2.2rem;
+}
+.quiz-container .option-list {
+    padding: 3rem 0;
+}
+.quiz-container .option-list .option {
+    font-size: 1.8rem;
+    padding: 1rem 1.8rem;
+    margin-bottom: 2rem;
+    background-color: rgb(255, 255, 51);
+    border: 1.5px solid #999900;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: 0.2s all ease-in;
+}
+.quiz-container .option-list .option:hover {
+    background-color: #ffff99;
+}
+
+.quiz-container .option-list .option .wrong {
+    color: red;
+}
+.quiz-container .option-list .option .tick {
+    color: green;
+}
+.quiz-container .option-list .option.correct {
+    background-color: #adebad;
+    border-color: #29a329;
+}
+.quiz-container .option-list .option.incorrect {
+    border-color: #b30000;
+    background-color: #ff8080;
+}
+.quiz-container .option-list .option.disabled {
+    pointer-events: none;
+}
+
+
+.quiz-container .quiz-footer {
+    padding: 2.2rem 2.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.quiz-container .quiz-footer .question-number span {
+    font-size: 2.1rem;
+    display: flex;
+    user-select: none;
+}
+.quiz-footer .question-number span p {
+    font-weight: 600;
+    padding: 0 5px;
+}
+.quiz-footer .next-btn {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 1.5rem 3.8rem;
+    outline: none;
+    color: black;
+    border: 2px solid black;
+    border-radius: 6px;
+    background-color: rgb(255, 255, 51);
+    transition: 0.7s all ease-in-out;
+}
+.quiz-footer .next-btn:hover {
+    transform: rotateX(360deg);
+    box-shadow: 0 0 5px rgb(255, 255, 51), 0 0 20px rgb(255, 255, 51), 0 0 40px rgb(255, 255, 51);
+}
+
+
+.result-container {
+    opacity: 0;
+    padding: 2rem;
+    height: 45rem;
+    width: 40rem;
+    background-color: #fff;
+    border-radius: 6px;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
+}
+.result-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.result-container img {
+    height: 16rem;
+}
+.result-container h4 {
+    font-size: 3rem;
+}
+.result-container .complete-text {
+    font-size: 1.8rem;
+}
+.result-container .score-text {
+    font-size: 1.6rem;
+    display: flex;
+}
+.result-container .score-text p {
+    font-weight: 600;
+    padding: 0 5px;
+}
+.result-container .continue-buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.result-container .continue-buttons button {
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 1.2rem 2rem;
+    outline: none;
+    color: black;
+    border: 2px solid black;
+    border-radius: 6px;
+    background-color: rgb(255, 255, 51);
+    transition: 0.7s all ease-in-out;
+}
+.result-container .continue-buttons button:hover {
+    transform: rotateX(360deg);
+    box-shadow: 0 0 5px rgb(255, 255, 51), 0 0 20px rgb(255, 255, 51), 0 0 40px rgb(255, 255, 51);
+}
